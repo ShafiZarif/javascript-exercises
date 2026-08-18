@@ -1,4 +1,16 @@
-const removeFromArray = function() {
+const removeFromArray = function (array, ...values) {
+  values.forEach((value) => {
+    let i = 0;
+    while (i < array.length) {
+      if (array[i] === value) {
+        array.splice(i, 1);
+      } else {
+        i++;
+      }
+    }
+    return array;
+  });
+  return array;
 };
 
 // Do not edit below this line
