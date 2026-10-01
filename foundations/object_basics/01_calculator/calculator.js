@@ -1,26 +1,67 @@
-const add = function() {
-	
+const add = function (firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
 };
 
-const subtract = function() {
-	
+// console.log(add(2, 2));
+// console.log(add(2, 6));
+// console.log(add(0, 0));
+
+const subtract = function (firstNumber, secondNumber) {
+  return firstNumber - secondNumber;
 };
 
-const sum = function() {
-	
+// console.log(subtract(10, 6));
+// console.log(subtract(-10, -4));
+// console.log(subtract(-8, 7));
+
+const sum = function (array) {
+  return array.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
 };
 
-const multiply = function() {
+// const arrayZero = [];
+// console.log(sum(arrayZero));
 
+// const arrayOne = [7];
+// console.log(sum(arrayOne));
+
+// const arrayTwo = [7, 11];
+// console.log(sum(arrayTwo));
+
+// const arrayThree = [1, 3, 5, 7, 9];
+// console.log(sum(arrayThree));
+
+const multiply = function (array) {
+  return array.reduce((accumulator, currentValue) => {
+    return accumulator * currentValue;
+  }, 1);
 };
 
-const power = function() {
-	
+// console.log(multiply([2, 4]));
+// console.log(multiply([2, 4, 6, 8, 10, 12, 14]));
+
+const power = function (array) {
+  return Math.pow(array[0], array[1]);
 };
 
-const factorial = function() {
-	
+// console.log(power([4, 3]));
+// console.log(power([3, 10]));
+
+const factorial = function (number) {
+  let factorial = 1;
+  while (number > 1) {
+    factorial *= number;
+    number--;
+  }
+  return factorial;
 };
+
+// console.log(factorial(0));
+// console.log(factorial(1));
+// console.log(factorial(2));
+// console.log(factorial(5));
+// console.log(factorial(10));
 
 // Do not edit below this line
 module.exports = {
@@ -29,5 +70,5 @@ module.exports = {
   sum,
   multiply,
   power,
-  factorial
+  factorial,
 };
