@@ -41,8 +41,8 @@ const multiply = function (array) {
 // console.log(multiply([2, 4]));
 // console.log(multiply([2, 4, 6, 8, 10, 12, 14]));
 
-const power = function (array) {
-  return Math.pow(array[0], array[1]);
+const power = function (firstNumber, secondNumber) {
+  return Math.pow(firstNumber, secondNumber);
 };
 
 // console.log(power([4, 3]));
